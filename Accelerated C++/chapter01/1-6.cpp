@@ -12,4 +12,6 @@ int main() {
 	    << "; nice to meet you too!" << std::endl;
 
   return 0;
+	// input two name once
+	// see what the results are
 }
