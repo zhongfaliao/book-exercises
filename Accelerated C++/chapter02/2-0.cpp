@@ -19,6 +19,8 @@ int main()
 	std::wcout << "Please enter the number of padding: ";
 
 	//read the number of padding
+	
+	
 	int pad;
 	std::wcin >> pad;
 	
