@@ -1,14 +1,17 @@
-// source file for the `median' function
-#include <algorithm>    // to get the declaration of `sort'
-#include <stdexcept>    // to get the declaration of `domain_error'
-#include <vector>       // to get the declaration of `vector'
+// source file for the 'median' function
+#include <algorithm>    // to get the declaration of 'sort'
+#include <stdexcept>    // to get the declaration of 'domain_error'
+#include <vector>       // to get the declaration of 'vector'
 
-using std::domain_error;   using std::sort;   using std::vector;
+using std::domain_error;   
+using std::sort;   
+using std::vector;
 
 #include "median.h"
 
-// compute the median of a `vector<double>'
-// note that calling this function copies the entire argument `vector'
+// compute the median of a 'vector<double>'
+// note that calling this function copies the entire argument 'vector'
+
 double median(vector<double> vec)
 {
 #ifdef _MSC_VER
