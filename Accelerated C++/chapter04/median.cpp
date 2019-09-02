@@ -14,11 +14,8 @@ using std::vector;
 
 double median(vector<double> vec)
 {
-#ifdef _MSC_VER
+
   typedef std::vector<double>::size_type vec_sz;
-#else
-  typedef vector<double>::size_type vec_sz;
-#endif
 
   vec_sz size = vec.size();
   if (size == 0)
@@ -28,5 +25,6 @@ double median(vector<double> vec)
 
   vec_sz mid = size/2;
 
-  return size % 2 == 0 ? (vec[mid] + vec[mid-1]) / 2 : vec[mid]; // test whether the size is even or odd
+  // test whether the size is even or odd
+  return size % 2 == 0 ? (vec[mid] + vec[mid-1]) / 2 : vec[mid]; 
 }
