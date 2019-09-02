@@ -4,7 +4,10 @@
 using namespace std;
 
 int main() {
+  
   typedef string::size_type str_sz;
+  // because s.size() returns this type
+  // to avoid error/warning, neend same type
 
   string longest;
   str_sz longest_length = 0;
