@@ -5,7 +5,8 @@
 
 #include <vector>
 
-double median(std::vector<double>);
+double median(std::vector<double>); 
+// notice that in a header file, no need to specify a name, only a type safices
 
 #endif
 
