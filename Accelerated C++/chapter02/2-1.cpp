@@ -17,7 +17,7 @@ int main() {
   const string greeting = "Hello, " + name + "!";
 
   // the number of blanks surrounding the greeting
-  const int pad = 0;
+  const int pad = 0; // the pad has been set to a constant.
 
   // the number of rows and columns to write
   const int rows = pad * 2 + 3;
