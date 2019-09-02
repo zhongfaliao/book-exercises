@@ -44,9 +44,9 @@ int main()
 	}
 
 	//write the result
-	streamsize prec = cout.precision();
-	cout << "Your final grade is " << setprecision(3)
+	streamsize prec = cout.precision(); // store the old settings of precision
+	cout << "Your final grade is " << setprecision(3) // set our precision
 		<< 0.2*midterm + 0.4*final + 0.4*sum / count
-		<< setprecision(prec) << endl;
+		<< setprecision(prec) << endl; //re-store the previous settings
 		
 }
