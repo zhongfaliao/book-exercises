@@ -33,8 +33,8 @@ int main() {
   double x;
 
   // invariant:
-  //     we have read `count' grades so far, and
-  //     `sum' is the sum of the first `count' grades
+  //     we have read 'count' grades so far, and
+  //     'sum' is the sum of the first 'count' grades
   while (cin >> x) {
     ++count;
     sum += x;
