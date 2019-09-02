@@ -19,7 +19,7 @@ int main() {
   // the number of blanks surrounding the greeting
   cout << "Please enter pad: ";
   int pad;
-  cin >> pad;
+  cin >> pad; // input padding on the run
 
   // the number of rows and columns to write
   const int rows = pad * 2 + 3;
