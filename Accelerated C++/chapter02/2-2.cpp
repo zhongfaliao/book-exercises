@@ -17,7 +17,7 @@ int main() {
   const string greeting = "Hello, " + name + "!";
 
   // the number of blanks surrounding the greeting
-  const int h_pad = 1;
+  const int h_pad = 1; // use to variables for horizontal and vertical padding, separately
   const int v_pad = 2;
 
   // the number of rows and columns to write
