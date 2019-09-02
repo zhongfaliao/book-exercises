@@ -12,6 +12,9 @@ using std::vector;
 // compute the median of a 'vector<double>'
 // note that calling this function copies the entire argument 'vector'
 
+// why do we need to copy the vector?
+// because calling .sort() changes the vector
+
 double median(vector<double> vec)
 {
 
