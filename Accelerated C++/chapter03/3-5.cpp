@@ -1,7 +1,7 @@
 #include <iomanip>
-#ifndef __GNUC__
+
 #include <ios>
-#endif
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,10 +10,11 @@ using std::cin;                  using std::setprecision;
 using std::cout;                 using std::string;
 using std::endl;                 using std::streamsize;
 
-#define NUM_HOMEWORK 2
+#define NUM_HOMEWORK 2 // define a constant
 using std::vector;
 
 int main() {
+  
   vector<string> names;
   vector<double> final_grades;
   bool done = false;
@@ -43,8 +44,8 @@ int main() {
     double x;
 
     // invariant:
-    //     we have read `count' grades so far, and
-    //     `sum' is the sum of the first `count' grades
+    //     we have read 'count' grades so far, and
+    //     'sum' is the sum of the first 'count' grades
     while (count < NUM_HOMEWORK) {
       ++count;
       cin >> x;
