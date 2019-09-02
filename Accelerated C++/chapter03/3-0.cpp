@@ -1,6 +1,6 @@
-#include<iomanip>
+#include<iomanip> // defines the manipulator setprecision
 #include<iostream>
-#include<ios>
+#include<ios> // this header defines streamsize
 #include<string>
 
 using std::cin;
