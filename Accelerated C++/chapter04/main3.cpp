@@ -1,8 +1,6 @@
 #include <algorithm>
 #include <iomanip>
-#ifndef __GNUC__
 #include <ios>
-#endif
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -14,13 +12,7 @@ using std::cin;                     using std::setprecision;
 using std::cout;                    using std::sort;
 using std::domain_error;            using std::streamsize;
 using std::endl;                    using std::string;
-#ifndef _MSC_VER
 using std::max;                     using std::vector;
-#else
-using std::vector;
-
-#include "../minmax.h"
-#endif
 
 int main() {
   vector<Student_info> students;
@@ -29,7 +21,7 @@ int main() {
 
   // read and store all the students' data.
   // Invariant:	`students' contains all the student records read so far
-  //			`maxlen' contains the length of the longest name in `students'
+  //			maxlen' contains the length of the longest name in `students'
   while (read(cin, record)) {
     // find length of longest name
     maxlen = max(maxlen, record.name.size());
