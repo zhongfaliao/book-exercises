@@ -20,8 +20,8 @@ int main() {
   string::size_type maxlen = 0;       // the length of the longest name
 
   // read and store all the students' data.
-  // Invariant:	`students' contains all the student records read so far
-  //			maxlen' contains the length of the longest name in `students'
+  // Invariant:	'students' contains all the student records read so far
+  //			maxlen' contains the length of the longest name in 'students'
   while (read(cin, record)) {
     // find length of longest name
     maxlen = max(maxlen, record.name.size());
@@ -39,7 +39,7 @@ int main() {
 #endif
 	    i != students.size(); ++i) {
 
-	 // write the name, padded on the right to `maxlen' `+' `1' characters
+	 // write the name, padded on the right to 'maxlen' '+' '1' characters
 	 cout << students[i].name
 	      << string(maxlen + 1 - students[i].name.size(), ' ');
 
