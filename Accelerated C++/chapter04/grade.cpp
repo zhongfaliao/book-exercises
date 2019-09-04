@@ -11,7 +11,7 @@ using std::domain_error;  using std::vector;
 double grade(double midterm, double final, double homework) {
   return 0.2 * midterm + 0.4 * final + 0.4 * homework;
 }
-
+  
 // compute a student's overall grade from midterm and final exam grades
 // and vector of homework grades.
 
