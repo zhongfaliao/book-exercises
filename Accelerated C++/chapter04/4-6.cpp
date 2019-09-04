@@ -114,11 +114,7 @@ int main() {
   // alphabetize the records
   sort(students.begin(), students.end(), compare);
   
-#ifdef _MSC_VER
-  for (std::vector<Student_info>::size_type i = 0;
-#else
        for (vector<Student_info>::size_type i = 0;
-#endif
 	    i != students.size(); ++i) {
 
 	 // write the name, padded on the right to 'maxlen' '+' '1' characters
