@@ -7,7 +7,7 @@ using namespace std;
 int get_width(int n) {
   return log10(n) + 1;
 }
-
+   
 int main() {
   int max = 100;
   
