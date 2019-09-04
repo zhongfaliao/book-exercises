@@ -5,11 +5,7 @@
 #include <string>
 #include <vector>
 
-#ifdef _MSC_VER
-#include "../minmax.h"
-#else
 using std::max;
-#endif
 
 using std::cin;
 using std::cout;
@@ -29,14 +25,10 @@ struct Student_info {
   double grade;
 };	// note the semicolon--it's required
 
-// compute the median of a `vector<double>'
-// note that calling this function copies the entire argument `vector'
+// compute the median of a 'vector<double>'
+// note that calling this function copies the entire argument 'vector'
 double median(vector<double> vec) {
-#ifdef _MSC_VER
-  typedef std::vector<double>::size_type vec_sz;
-#else
   typedef vector<double>::size_type vec_sz;
-#endif
 
   vec_sz size = vec.size();
   if (size == 0)
@@ -56,7 +48,7 @@ double grade(double midterm, double final, double homework) {
 
 // compute a student's overall grade from midterm and final exam grades
 // and vector of homework grades.
-// this function does not copy its argument, because `median' does so for us.
+// this function does not copy its argument, because 'median' does so for us.
 double grade(double midterm, double final, const vector<double>& hw) {
   if (hw.size() == 0)
     throw domain_error("student has done no homework");
@@ -68,7 +60,7 @@ double grade(const Student_info& s) {
   return s.grade;
 }
 
-// read homework grades from an input stream into a `vector<double>'
+// read homework grades from an input stream into a 'vector<double>'
 istream& read_hw(istream& in, vector<double>& hw) {
   if (in) {
     // get rid of previous contents
@@ -129,7 +121,7 @@ int main() {
 #endif
 	    i != students.size(); ++i) {
 
-	 // write the name, padded on the right to `maxlen' `+' `1' characters
+	 // write the name, padded on the right to 'maxlen' '+' '1' characters
 	 cout << students[i].name
 	      << string(maxlen + 1 - students[i].name.size(), ' ');
 
