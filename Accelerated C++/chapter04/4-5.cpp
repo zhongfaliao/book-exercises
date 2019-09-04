@@ -1,10 +1,11 @@
+#include <algorithm> // for sort to work..
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-istream& read_words(istream& in, vector<string>& words) {
+istream & read_words(istream & in, vector<string> & words) {
   if (in) {
     words.clear();
     string word;
@@ -19,6 +20,7 @@ istream& read_words(istream& in, vector<string>& words) {
 }
 
 int main() {
+	
   vector<string> words;
 
   read_words(cin, words);
