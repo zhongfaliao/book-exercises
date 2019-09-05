@@ -12,9 +12,7 @@ using std::getline;
 using std::string;
 using std::vector;
 
-#ifndef _MSC_VER
 using std::isspace;
-#endif
 
 int main() {
   string s;
@@ -23,12 +21,8 @@ int main() {
   while (getline(cin, s)) {
     vector<string> v = split(s);
 
-    // write each word in `v'
-#ifdef _MSC_VER
-    for (std::vector<string>::size_type i = 0; i != v.size(); ++i)
-#else
+    // write each word in 'v'
       for (vector<string>::size_type i = 0; i != v.size(); ++i)
-#endif
 	cout << v[i] << endl;
   }
 
