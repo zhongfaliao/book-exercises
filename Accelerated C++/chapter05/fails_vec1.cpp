@@ -8,18 +8,14 @@ using std::vector;
 vector<Student_info> extract_fails(vector<Student_info>& students) {
   vector<Student_info> pass, fail;
 
-#ifdef _MSC_VER
-  for (std::vector<Student_info>::size_type i = 0;
-#else
-       for (vector<Student_info>::size_type i = 0;
-#endif
-	    i != students.size(); ++i)
-	 if (fgrade(students[i]))
+   for (vector<Student_info>::size_type i = 0;
+	    i != students.size(); ++i;
+	if (fgrade(students[i]))
 	   fail.push_back(students[i]);
-	 else
+	else
 	   pass.push_back(students[i]);
 
-       students = pass;
+   students = pass;
 
-       return fail;
-       }
+   return fail;
+}
