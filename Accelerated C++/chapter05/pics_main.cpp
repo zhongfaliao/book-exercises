@@ -12,7 +12,7 @@ using std::endl;
 using std::ostream_iterator;
 using std::string;
 using std::vector;
-
+  
 int main() {
   vector<string> p;
   p.push_back("this is an");
