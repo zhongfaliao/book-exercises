@@ -5,11 +5,8 @@
 #include "grade.h"
 #include "Student_info.h"
 
-#ifdef _MSC_VER
-#include "../minmax.h"
-#else
+
 using std::max;
-#endif
 
 using std::cin;
 using std::cout;
