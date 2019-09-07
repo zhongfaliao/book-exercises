@@ -15,7 +15,7 @@ using std::endl;
 using std::sort;
 using std::string;
 using std::vector;
-
+ 
 #ifdef _MSC_VER
 #include "../minmax.h"
 #else
