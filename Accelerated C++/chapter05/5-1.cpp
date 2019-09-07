@@ -31,6 +31,7 @@ vector<Rotation> rotate_line(string line) {
     Rotation rot = {words.size() - i, words};
     rotations.push_back(rot);
     rotate(words.begin(), words.begin() + 1, words.end());
+    // rotate the words vector to left, so that the next/second entry becomes the first
   }
 
   return rotations;
@@ -42,6 +43,8 @@ vector<Rotation> rotate_lines(vector<string> lines) {
   for (vector<string>::size_type i = 0; i < lines.size(); ++i) {
     vector<Rotation> new_rotations = rotate_line(lines[i]);
     rotations.insert(rotations.end(), new_rotations.begin(), new_rotations.end());
+    // insert in the the rotations vector, from the end of rotations, with the entire
+    // new_rotations vector, from its beginning to its end
   }
 
   return rotations;
