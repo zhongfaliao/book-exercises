@@ -17,22 +17,15 @@ using std::string;
 using std::list;
 using std::vector;
 
-#ifdef _MSC_VER
-#include "../minmax.h"
-#else
 using std::max;
-#endif
 
 typedef list<Student_info> Student_infos;
 //typedef vector<Student_info> Student_infos;
 
 Student_infos extract_fails(Student_infos& students) {
   Student_infos fail;
-#ifdef _MSC_VER
+
   Student_infos::iterator iter = students.begin();
-#else
-  Student_infos::iterator iter = students.begin();
-#endif
 
   while (iter != students.end()) {
     if (fgrade(*iter)) {
