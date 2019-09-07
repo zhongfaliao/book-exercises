@@ -16,19 +16,12 @@ using std::sort;
 using std::string;
 using std::vector;
 
-#ifdef _MSC_VER
-#include "../minmax.h"
-#else
 using std::max;
-#endif
 
 vector<Student_info> extract_fails(vector<Student_info>& students) {
   vector<Student_info> fail;
-#ifdef _MSC_VER
-  std::vector<Student_info>::iterator iter = students.begin();
-#else
+
   vector<Student_info>::iterator iter = students.begin();
-#endif
 
   while (iter != students.end()) {
     if (fgrade(*iter)) {
