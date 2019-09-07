@@ -12,7 +12,7 @@ struct Rotation {
   vector<string>::size_type first;
   vector<string> words;
 };
-
+   
 vector<string> read_lines() {
   vector<string> lines;
   string line;
@@ -22,7 +22,7 @@ vector<string> read_lines() {
 
   return lines;
 }
-
+ 
 vector<Rotation> rotate_line(string line) {
   vector<Rotation> rotations;
   vector<string> words = split(line);
