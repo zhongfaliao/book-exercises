@@ -60,7 +60,7 @@ double average_analysis(const vector<Student_info>& students) {
   return median(grades);
 }
 
-// median of the nonzero elements of `s.homework', or `0' if no such elements exist
+// median of the nonzero elements of 's.homework', or '0' if no such elements exist
 double optimistic_median(const Student_info& s) {
   vector<double> nonzero;
   remove_copy(s.homework.begin(), s.homework.end(),
