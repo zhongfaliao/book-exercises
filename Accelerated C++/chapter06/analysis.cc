@@ -49,6 +49,8 @@ double average_grade(const Student_info& s) {
   return grade(s.midterm, s.final, average(s.homework));
 }
 
+
+
 double average_analysis(const vector<Student_info>& students) {
   vector<double> grades;
 
