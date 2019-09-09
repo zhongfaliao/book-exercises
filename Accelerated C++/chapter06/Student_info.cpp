@@ -1,4 +1,4 @@
-// source file for `Student_info'-related functions
+// source file for 'Student_info'-related functions
 #include "Student_info.h"
 
 using std::istream;  using std::vector;
@@ -14,7 +14,7 @@ istream& read(istream& is, Student_info& s) {
   return is;
 }
 
-// read homework grades from an input stream into a `vector<double>'
+// read homework grades from an input stream into a 'vector<double>'
 istream& read_hw(istream& in, vector<double>& hw) {
   if (in) {
     // get rid of previous contents
