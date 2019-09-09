@@ -22,6 +22,7 @@ int main() {
       didnt.push_back(student);
   }
 
+	
   // verify that the analyses will show us something
   if (did.empty()) {
     cout << "No student did all the homework!" << endl;
@@ -33,6 +34,7 @@ int main() {
     return 1;
   }
 
+	
   // do the analyses
   write_analysis(cout, "median", median_analysis, did, didnt);
   write_analysis(cout, "average", average_analysis, did, didnt);
