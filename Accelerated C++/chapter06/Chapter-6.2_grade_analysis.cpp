@@ -24,7 +24,6 @@ int main() {
       didnt.push_back(student);
   }
 
-	
   // verify that the analyses will show us something
   if (did.empty()) {
     cout << "No student did all the homework!" << endl;
