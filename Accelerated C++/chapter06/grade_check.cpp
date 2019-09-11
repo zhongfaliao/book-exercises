@@ -1,5 +1,4 @@
 #include <algorithm>
-
 #include "Student_info.h"
 
 using std::find;
