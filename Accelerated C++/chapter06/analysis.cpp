@@ -26,7 +26,8 @@ double grade_aux(const Student_info& s) {
   try {
     return grade(s);
   } catch (domain_error) {
-    return grade(s.midterm, s.final, 0);
+	  // student not done any homework, pass '0' as homework to the overload function grade()
+    return grade(s.midterm, s.final, 0); 
   }
 }
 
