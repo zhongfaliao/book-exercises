@@ -1,4 +1,4 @@
-#include <algorithm>
+#include <algorithm> //using std::stable_partition;
 #include <vector>
 
 #include "Student_info.h"
