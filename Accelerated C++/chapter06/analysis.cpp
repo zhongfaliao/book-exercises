@@ -15,6 +15,13 @@ using std::ostream;              using std::remove_copy;
 using std::string;               using std::transform;
 using std::vector;
 
+bool did_all_hw(const Student_info& s) {
+	// return the iterator/address starting from .begin() where the first '0' is
+	// found. If the find() function returns .end(), it means no '0' is found in
+	// s. Conclusion: the student did all the homework.
+	return ((find(s.homework.begin(), s.homework.end(), 0)) == s.homework.end());
+}
+
 double grade_aux(const Student_info& s) {
   try {
     return grade(s);
