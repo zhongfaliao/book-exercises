@@ -3,7 +3,9 @@
 #include <string>
 #include <vector>
 
-#include "split.h"
+#include "split.h" 
+// in the header file, we only declare a function
+// called split()
 
 using std::find_if;
 using std::string;
@@ -13,12 +15,12 @@ using std::vector;
 using std::isspace;
 #endif
 
-// `true' if the argument is whitespace, `false' otherwise
+// 'true' if the argument is whitespace, 'false' otherwise
 bool space(char c) {
   return isspace(c);
 }
 
-// `false' if the argument is whitespace, `true' otherwise
+// 'false' if the argument is whitespace, 'true' otherwise
 bool not_space(char c) {
   return !isspace(c);
 }
@@ -36,7 +38,7 @@ vector<string> split(const string& str) {
     // find end of next word
     iter j = find_if(i, str.end(), space);
 
-    // copy the characters in `[i,' `j)'
+    // copy the characters in [i, j)
     if (i != str.end())
       ret.push_back(string(i, j));
 
