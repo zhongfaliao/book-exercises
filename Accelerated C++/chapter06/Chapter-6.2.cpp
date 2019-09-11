@@ -23,6 +23,9 @@ int main() {
     else
       didnt.push_back(student);
   }
+	// NOTE, in entering the homework grades, if one student has not done
+	// a specific piece of homework, enter '0' for that
+	// otherwise, analysis would not work
 
   // verify that the analyses will show us something
   if (did.empty()) {
