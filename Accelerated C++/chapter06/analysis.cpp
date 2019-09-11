@@ -50,6 +50,8 @@ void write_analysis(ostream& out, const string& name,
 }
 
 double average(const vector<double>& v) {
+	// the third argument of acccumulate(,,) is for typedef
+	// e.g. here, '0.0' means we want a double type of return
   return accumulate(v.begin(), v.end(), 0.0) / v.size();
 }
 
