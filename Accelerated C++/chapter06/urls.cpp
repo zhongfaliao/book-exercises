@@ -45,7 +45,7 @@ vector<string> find_urls(const string& s) {
       // remember the \s-1URL\s0
       ret.push_back(string(b, after));
 
-      // advance `b' and check for more \s-1URL\s0s on this line
+      // advance 'b' and check for more \s-1URL\s0s on this line
       b = after;
     }
   }
@@ -79,7 +79,7 @@ url_beg(string::const_iterator b, string::const_iterator e) {
   while ((i = search(i, e, sep.begin(), sep.end())) != e) {
     // make sure the separator isn't at the beginning or end of the line
     if (i != b && i + sep.size() != e) {
-      // `beg' marks the beginning of the protocol-name
+      // 'beg' marks the beginning of the protocol-name
       iter beg = i;
       while (beg != b && isalpha(beg[-1]))
 	--beg;
