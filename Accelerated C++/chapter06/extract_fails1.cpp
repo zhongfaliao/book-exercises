@@ -1,5 +1,5 @@
-#include <algorithm>
-#include <iterator>
+#include <algorithm> //using std::remove_copy_if; && using std::remove_if;
+#include <iterator> //using std::back_inserter
 #include <vector>
 
 #include "Student_info.h"
