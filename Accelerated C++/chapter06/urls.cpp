@@ -34,7 +34,7 @@ vector<string> find_urls(const string& s) {
 
   // look through the entire input
   while (b != e) {
-    // look for one or more letters followed by `://'
+    // look for one or more letters followed by '://'
     b = url_beg(b, e);
 
     // if we found it
@@ -62,7 +62,7 @@ bool not_url_char(char c) {
   // characters, in addition to alphanumerics, that can appear in a \s-1URL\s0
   static const string url_ch = "~;/?:@=&$-_.+!*'(),";
 
-  // see whether `c' can appear in a \s-1URL\s0 and return the negative
+  // see whether 'c' can appear in a \s-1URL\s0 and return the negative
   return !(isalnum(c) ||
 	   find(url_ch.begin(), url_ch.end(), c) != url_ch.end());
 }
@@ -73,7 +73,7 @@ url_beg(string::const_iterator b, string::const_iterator e) {
 
   typedef string::const_iterator iter;
 
-  // `i' marks where the separator was found
+  // 'i' marks where the separator was found
   iter i = b;
 
   while ((i = search(i, e, sep.begin(), sep.end())) != e) {
@@ -89,7 +89,7 @@ url_beg(string::const_iterator b, string::const_iterator e) {
 	return beg;
     }
 
-    // the separator we found wasn't part of a \s-1URL\s0; advance `i' past this separator
+    // the separator we found wasn't part of a \s-1URL\s0; advance 'i' past this separator
     i += sep.size();
   }
 
