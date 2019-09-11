@@ -20,6 +20,7 @@ using std::vector;
 
 bool not_url_char(char);
 
+
 string::const_iterator
 url_end(string::const_iterator, string::const_iterator);
 
