@@ -43,6 +43,10 @@ double median_analysis(const vector<Student_info>& students) {
 
 void write_analysis(ostream& out, const string& name,
                     double analysis(const vector<Student_info>&),
+		    // THIS ARGUMENT is defined be to a function which takes vector<Student_info>& as input
+		    // when write_analysis is called in  the main(){} function, we are going to pass the actual
+		    // function to use
+		    
                     const vector<Student_info>& did,
                     const vector<Student_info>& didnt) {
   out << name << ": median(did) = " << analysis(did) <<
