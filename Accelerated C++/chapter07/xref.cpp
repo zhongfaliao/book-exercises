@@ -12,7 +12,8 @@ using std::vector;         using std::map;
 
 // find all the lines that refer to each word in the input
 map<string, vector<int> > xref(istream& in,
-			       vector<string> find_words(const string&) = split) {
+			       vector<string> find_words(const string&) = split) 
+{
   string line;
   int line_number = 0;
   map<string, vector<int> > ret;
@@ -31,10 +32,11 @@ map<string, vector<int> > xref(istream& in,
 	 }
 
     return ret;
-  }
+}
 
   int main() {
     // call `xref' using `split' by default
+    // split() is called by default, there is no need to pass the argument
     map<string, vector<int> > ret = xref(cin);
 
     // write the results
