@@ -11,6 +11,7 @@ void cat(string s) {
   target += s;
 }
 
+
 int main() {
   vector<string> words = vector<string>(3, "bitch");
   for_each(words.begin(), words.end(), cat);
