@@ -9,6 +9,8 @@
 #include "grade.h"
 #include "median.h"
 
+
+
 using std::accumulate;           using std::back_inserter;
 using std::domain_error;         using std::endl;
 using std::ostream;              using std::remove_copy;
