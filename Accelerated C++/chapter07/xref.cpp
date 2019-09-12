@@ -25,11 +25,7 @@ map<string, vector<int> > xref(istream& in,
     vector<string> words = find_words(line);
 
     // remember that each word occurs on the current line
-#ifdef _MSC_VER
-    for (std::vector<string>::const_iterator it = words.begin();
-#else
-	 for (vector<string>::const_iterator it = words.begin();
-#endif
+    for (vector<string>::const_iterator it = words.begin();
 	      it != words.end(); ++it)
 	   ret[*it].push_back(line_number);
 	 }
