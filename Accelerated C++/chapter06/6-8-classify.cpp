@@ -11,5 +11,6 @@ vector<Student_info> classify(vector<Student_info>& input,
   vector<Student_info> output(iter, input.end());
   input.erase(iter, input.end());
 
+	
   return output;
 }
