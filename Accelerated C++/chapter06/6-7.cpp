@@ -9,6 +9,7 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+
 vector<Student_info> extract_didnt(vector<Student_info>& input) {
   vector<Student_info>::iterator iter =
     stable_partition(input.begin(), input.end(), did_all_hw);
