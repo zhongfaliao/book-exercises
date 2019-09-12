@@ -42,21 +42,13 @@ map<string, vector<int> > xref(istream& in,
     map<string, vector<int> > ret = xref(cin);
 
     // write the results
-#ifdef _MSC_VER
-    for (std::map<string, vector<int> >::const_iterator it = ret.begin();
-#else
-	 for (map<string, vector<int> >::const_iterator it = ret.begin();
-#endif
+    for (map<string, vector<int> >::const_iterator it = ret.begin();
 	      it != ret.end(); ++it) {
 	   // write the word
 	   cout << it->first << " occurs on line(s): ";
 
 	   // followed by one or more line numbers
-#ifdef _MSC_VER
-	   std::vector<int>::const_iterator line_it = it->second.begin();
-#else
 	   vector<int>::const_iterator line_it = it->second.begin();
-#endif
 	   cout << *line_it;	// write the first line number
 
 	   ++line_it;
