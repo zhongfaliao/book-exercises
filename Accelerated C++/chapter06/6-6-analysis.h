@@ -5,6 +5,8 @@
 
 #include "Student_info.h"
 
+
+
 bool did_all_hw(const Student_info& s);
 double grade_aux(const Student_info& s);
 double average_grade(const Student_info& s);
