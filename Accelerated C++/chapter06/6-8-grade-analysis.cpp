@@ -10,6 +10,7 @@ using std::cout;
 using std::endl;
 using std::vector;
 
+
 int main() {
   // students who did and didn't do all their homework
   vector<Student_info> did;
