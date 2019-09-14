@@ -14,8 +14,9 @@ struct Student_info {
   vector<double> homework;
 };	// note the semicolon--it's required
 
-// compute the median of a `vector<double>'
-// note that calling this function copies the entire argument `vector'
+// compute the median of a 'vector<double>'
+// note that calling this function copies the entire argument 'vector'
+// copying the function, because sort() changes the vector, therefore need a local copy
 double median(vector<double> vec) {
   typedef vector<double>::size_type vec_sz;
 
@@ -37,8 +38,8 @@ double grade(double midterm, double final, double homework) {
 
 // compute a student's overall grade from midterm and final exam grades
 // and vector of homework grades.
-// this function does not copy its argument, because `median' does so for us.
-double grade(double midterm, double final, const vector<double>& hw) {
+// this function does not copy its argument, because 'median' does so for us.
+double grade(double midterm, double final, const vector<double> & hw) {
   if (hw.size() == 0)
     throw domain_error("student has done no homework");
 
@@ -49,9 +50,11 @@ double grade(const Student_info& s) {
   return grade(s.midterm, s.final, s.homework);
 }
 
-// read homework grades from an input stream into a `vector<double>'
+// read homework grades from an input stream into a 'vector<double>'
 istream& read_hw(istream& in, vector<double>& hw) {
-  if (in) {
+  
+  if (in) 
+  {
     // get rid of previous contents
     hw.clear();
 
