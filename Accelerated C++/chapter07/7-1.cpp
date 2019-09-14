@@ -14,6 +14,7 @@ int main() {
   while (cin >> s)
     ++counters[s];
 
+	// group the words with the same frequency together!
   for (map<string, int>::const_iterator it = counters.begin();
        it != counters.end(); ++it)
     words_by_freq[it->second].push_back(it->first);
