@@ -28,7 +28,7 @@ void split(const string& str, Out os) {          // changed
     // find end of next word
     iter j = find_if(i, str.end(), space);
 
-    // copy the characters in `[i,' `j)'
+    // copy the characters in [i, j)
     if (i != str.end())
       *os++ = string(i, j);   // changed
 
