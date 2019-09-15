@@ -16,4 +16,3 @@ int main()
 		split(s, ostream_iterator<string>(cout, "\n"));
 	return 0;
 }
-
