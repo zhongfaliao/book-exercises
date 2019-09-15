@@ -27,13 +27,14 @@ map<string, vector<int> > xref(istream& in,
 	 it != words.end(); ++it)
       if (find(ret[*it].begin(), ret[*it].end(), line_number) == ret[*it].end())
 	ret[*it].push_back(line_number);
+    // only if for a specific word, the line_number is NOT YET in its associated vector<int>, line_number can be inserted
   }
 
   return ret;
 }
 
 int main() {
-  // call `xref' using `split' by default
+  // call 'xref' using 'split' by default
   map<string, vector<int> > ret = xref(cin);
 
   // write the results
