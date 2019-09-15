@@ -1,5 +1,6 @@
 // This file contains sample implementations of assorted algorithms
-// from the standard library.  It is not actually used by any of the
+// from the standard library.  
+// It is not actually used by any of the
 // other code in the book.
 
 template <class In, class X> In find(In begin, In end, const X& x)
