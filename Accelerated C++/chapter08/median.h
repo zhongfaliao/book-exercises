@@ -8,14 +8,11 @@
 using std::domain_error;
 using std::sort;
 using std::vector;
+
 template <class T>
 T median(vector<T> v)
 {
-#ifdef _MSC_VER
-        typedef typename std::vector<T>::size_type vec_sz;
-#else
 	typedef typename vector<T>::size_type vec_sz;
-#endif
 
 	vec_sz size = v.size();
 	if (size == 0)
