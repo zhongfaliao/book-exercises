@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "8-5-grammar-utils.hpp"
+#include "8-5-grammar-utils.h"
 #include "split.h"
 
 using namespace std;
