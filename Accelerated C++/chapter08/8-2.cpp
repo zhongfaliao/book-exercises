@@ -7,6 +7,7 @@ using namespace std;
 
 bool passes(char c) {
   return c == 'P';
+  
 }
 
 int main() {
