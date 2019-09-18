@@ -1,7 +1,7 @@
 #include <vector>
 #include <iostream>
 
-#include "8-1-analysis.hpp"
+#include "8-1-analysis.h"
 #include "Student_info.h"
 
 using namespace std;
