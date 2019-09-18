@@ -1,7 +1,7 @@
 #include <numeric>
 #include <stdexcept>
 
-#include "8-1-analysis.hpp"
+#include "8-1-analysis.h"
 #include "Student_info.h"
 #include "grade.h"
 #include "median.h"
@@ -29,7 +29,7 @@ double average_grade(const Student_info& s) {
   return grade(s.midterm, s.final, average(s.homework));
 }
 
-// median of the nonzero elements of `s.homework', or `0' if no such elements exist
+// median of the nonzero elements of 's.homework', or '0' if no such elements exist
 double optimistic_median(const Student_info& s) {
   vector<double> nonzero;
   remove_copy(s.homework.begin(), s.homework.end(),
