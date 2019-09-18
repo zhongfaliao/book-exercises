@@ -19,7 +19,7 @@ OutputIterator gen_aux(const Grammar& g, const std::string& word,
   if (!bracketed(word)) {
     *d = word;
   } else {
-    // locate the rule that corresponds to `word'
+    // locate the rule that corresponds to 'word'
     Grammar::const_iterator it = g.find(word);
 
     if (it == g.end())
