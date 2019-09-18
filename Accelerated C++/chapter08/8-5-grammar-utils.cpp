@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// return a random integer in the range `[0,' `n)'
+// return a random integer in the range [0, n)
 int nrand(int n) {
   if (n <= 0 || n > RAND_MAX)
     throw domain_error("Argument to nrand is out of range");
@@ -20,16 +20,18 @@ int nrand(int n) {
 
 bool bracketed(const string& s) {
   return s.size() > 1 && s[0] == '<' && s[s.size() - 1] == '>';
+  // minimum length 2 and enclosed by < >
 }
 
 // read a grammar from a given input stream
-Grammar read_grammar(istream& in) {
+Grammar read_grammar(istream & in) {
   Grammar ret;
-  string line;
+  string line; // no header file #include<string>
+  // okay because #include "8-5-grammar-utils.h" imported the #include<string> therein
 
   // read the input
   while (getline(in, line)) {
-    // `split' the input into words
+    // 'split' the input into words
     vector<string> entry;
     split(line, back_inserter(entry));
 
