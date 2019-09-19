@@ -33,7 +33,8 @@ int main() {
       double final_grade = students[i].grade();   // changed
       streamsize prec = cout.precision();
       cout << setprecision(3) << final_grade
-	   << setprecision(prec) << endl;
+	   << setprecision(prec) << endl; // recover previous precision settings
+	    
     } catch (domain_error e) {
       cout << e.what() << endl;
     }
