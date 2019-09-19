@@ -1,7 +1,7 @@
 #include <vector>
-#include <stdexcept>
+#include <stdexcept> // using std::domain_error; 
 
-using std::domain_error;
+using std::domain_error; 
 using std::vector;
 
 #include "grade.h"
