@@ -9,7 +9,7 @@ class Student_info {
   Student_info(std::istream&); // construct one by reading a stream
   std::string name() const { return n; }
 
-  // as defined in 9.2.1/157, and changed to read into `n' instead of `name'
+  // as defined in 9.2.1/157, and changed to read into 'n' instead of `name'
   std::istream& read(std::istream&);
 
   bool passing() const;
