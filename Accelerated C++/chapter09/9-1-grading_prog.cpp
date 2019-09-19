@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "9-1-Student_info.hpp"
+#include "9-1-Student_info.h"
 #include "median.h"
 
 using namespace std;
@@ -16,7 +16,7 @@ int main() {
   string::size_type maxlen = 0;
 
   // read and store the data
-  while (record.read(cin)) {                           // changed
+  while (record.read(cin)) {                         // changed
     maxlen = max(maxlen, record.name().size());      // changed
     students.push_back(record);
   }
