@@ -5,8 +5,9 @@
 
 class Student_info {
  public:
-  Student_info();              // construct an empty `Student_info' object
+  Student_info();              // construct an empty 'Student_info' object
   Student_info(std::istream&); // construct one by reading a stream
+ 
   std::string name() const { return n; }
   bool valid() const { return !homework.empty(); }
 
@@ -17,7 +18,7 @@ class Student_info {
 
  private:
   std::string n;
-  double midterm, final, g;
+  double midterm, final, g; // changed, one more private variable to store grade.
   std::vector<double> homework;
 };
 
