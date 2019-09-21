@@ -30,7 +30,7 @@ list<string> split(const string& str) {          // changed
     // find end of next word
     iter j = find_if(i, str.end(), space);
 
-    // copy the characters in `[i,' `j)'
+    // copy the characters in [i, j)
     if (i != str.end())
       l = cons(string(i, j), l);
       
