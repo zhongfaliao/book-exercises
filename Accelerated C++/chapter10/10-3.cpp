@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#include "10-2.hpp"
+#include "10-2.h"
 
 using namespace std;
 
