@@ -1,5 +1,6 @@
 #pragma once
 
+
 #include <cstdarg>
 #include <memory>
 
@@ -149,3 +150,4 @@ template <class T> std::ostream& operator<<(std::ostream& out,
   out << ")";
   return out;
 }
+
