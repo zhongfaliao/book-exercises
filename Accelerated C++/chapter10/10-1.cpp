@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "Student_info.h"
-#include "letter_grade.hpp"
+#include "letter_grade.h"
 #include "median.h"
 
 using namespace std;
