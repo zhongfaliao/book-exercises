@@ -16,9 +16,11 @@ template <class T> class Vec {
   typedef const T& const_reference;
 
   Vec() { create(); }
+ 
   explicit Vec(size_type n, const T& t = T()) { create(n, t); }
 
   Vec(const Vec& v) { create(v.begin(), v.end()); }
+ 
   Vec& operator=(const Vec&);	// as defined in 11.3.2/196
   ~Vec() { uncreate(); }
 
