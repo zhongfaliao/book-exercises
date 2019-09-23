@@ -8,6 +8,7 @@ using std::max;
 
 template <class T> class Vec {
  public:
+  // type definitions Chapter-11.2.3
   typedef T* iterator;
   typedef const T* const_iterator;
   typedef size_t size_type;
@@ -15,10 +16,9 @@ template <class T> class Vec {
   typedef T& reference;
   typedef const T& const_reference;
 
-  Vec() { create(); }
- 
+  Vec() { create(); } // Chapter-11.2.2 Default constructor
   explicit Vec(size_type n, const T& t = T()) { create(n, t); }
-
+  
   Vec(const Vec& v) { create(v.begin(), v.end()); }
  
   Vec& operator=(const Vec&);	// as defined in 11.3.2/196
@@ -53,8 +53,8 @@ template <class T> class Vec {
   }
 
  private:
-  iterator data;	// first element in the `Vec'
-  iterator avail;	// (one past) the last element in the `Vec'
+  iterator data;	// first element in the 'Vec'
+  iterator avail;	// (one past) the last element in the 'Vec'
   iterator limit;	// (one past) the allocated memory
 
   // facilities for memory allocation
@@ -68,7 +68,7 @@ template <class T> class Vec {
   // destroy the elements in the array and free the memory
   void uncreate();
 
-  // support functions for `push_back'
+  // support functions for 'push_back'
   void grow();
   void unchecked_append(const T&);
 };
@@ -100,7 +100,7 @@ template <class T> void Vec<T>::uncreate() {
     alloc.deallocate(data, limit - data);
   }
 
-  // reset pointers to indicate that the `Vec' is empty again
+  // reset pointers to indicate that the 'Vec' is empty again
   data = limit = avail = 0;
 }
 
@@ -121,7 +121,7 @@ template <class T> void Vec<T>::grow() {
   limit = data + new_size;
 }
 
-// assumes `avail' points at allocated, but uninitialized space
+// assumes 'avail' points at allocated, but uninitialized space
 template <class T> void Vec<T>::unchecked_append(const T& val) {
   alloc.construct(avail++, val);
 }
