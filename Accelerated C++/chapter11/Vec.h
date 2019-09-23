@@ -91,6 +91,7 @@ void Vec<T>::create(const_iterator i, const_iterator j) {
 
 template <class T> void Vec<T>::uncreate() {
   if (data) {
+   
     // destroy (in reverse order) the elements that were constructed
     iterator it = avail;
     while (it != data)
