@@ -38,7 +38,7 @@ template <class T> class Vec {
   size_type size() const { return avail - data; }  // changed
 
   iterator begin() { return data; }
-  const_iterator begin() const { return data; }
+  const_iterator begin() const { return data; }  // similar reason why we need to overload the begin() function
 
   iterator end() { return avail; }                 // changed
   const_iterator end() const { return avail; }     // changed
