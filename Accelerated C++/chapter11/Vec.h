@@ -25,7 +25,10 @@ template <class T> class Vec {
   ~Vec() { uncreate(); }
 
   T& operator[](size_type i) { return data[i]; }
-  const T& operator[](size_type i) const { return data[i]; }
+  const T& operator[](size_type i) const { return data[i]; } 
+  // How come this is an overloading? Because [] is a member function. 
+  // if the var is a "const Vec<int> var", calling var[10] would return an error if we do not define the 
+  // const T& operator[](...)
 
   void push_back(const T& t) {
     if (avail == limit) grow();
