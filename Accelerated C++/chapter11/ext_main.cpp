@@ -25,6 +25,7 @@ int main() {
 
   Vec<Student_info> fails = extract_fails(vs);
 
+  
   for (int i = 0; i < fails.size(); ++i)
     cout << fails[i].name << " " << grade(fails[i]) << endl;
 
