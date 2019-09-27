@@ -1,4 +1,4 @@
-// source file for `Student_info'-related functions
+// source file for 'Student_info'-related functions
 #include "Student_info.h"
 
 using namespace std;
@@ -19,7 +19,7 @@ istream& read(istream& is, Student_info& s) {
   return is;
 }
 
-// read homework grades from an input stream into a `Vec<double>'
+// read homework grades from an input stream into a 'Vec<double>'
 istream& read_hw(istream& in, Vec<double>& hw) {
   if (in) {
     // get rid of previous contents
