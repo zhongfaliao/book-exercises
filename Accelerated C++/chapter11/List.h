@@ -9,6 +9,8 @@ template <class T> class list {
   template <class U> friend list<U> cdr(const list<U>&);
   template <class U> friend size_t length(const list<U>&);
 
+	
+	
 public:
   typedef T* iterator;
   typedef const T* const_iterator;
