@@ -9,7 +9,9 @@ Vec<Student_info> extract_fails(Vec<Student_info>& students) {
   while (iter != students.end()) {
     if (fgrade(*iter)) {
       fail.push_back(*iter);
-      iter = students.erase(iter);
+      iter = students.erase(iter); 
+      // this should give a guidance on Exercise 11-6
+      // erase() removes one element and simultaneous all subsequent elements forward by one position
     } 
     else ++iter;
   }
