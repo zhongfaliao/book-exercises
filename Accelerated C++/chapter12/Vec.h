@@ -45,8 +45,8 @@ template <class T> class Vec {
   template <class In> void assign(In, In);
 
  private:
-  iterator data;	// first element in the `Vec'
-  iterator avail;	// (one past) the last element in the `Vec'
+  iterator data;	// first element in the 'Vec'
+  iterator avail;	// (one past) the last element in the 'Vec'
   iterator limit;	// (one past) the allocated memory
 
   // facilities for memory allocation
