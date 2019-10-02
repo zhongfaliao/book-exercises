@@ -3,6 +3,7 @@
 
 #include "Vec.h"
 
+
 using namespace std;
 
 void print_vec(const Vec<char>& v) {
