@@ -25,7 +25,7 @@ class Str {
 
   Str() { }
 
- Str(size_type n, char c): data(n, c) { }
+  Str(size_type n, char c): data(n, c) { }
   
   Str(const char* cp) { std::copy(cp, cp + std::strlen(cp), std::back_inserter(data)); }
 
