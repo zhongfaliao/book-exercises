@@ -1,8 +1,10 @@
 #include <iostream>
 
+
 #include "Str.hpp"
 
 using namespace std;
+
 
 int main() {
   // Default, num of char constructors
