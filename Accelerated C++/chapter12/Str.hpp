@@ -1,4 +1,5 @@
 #pragma once
+// implememt Str class like Vec without using Vec class
 
 #include <cstring>
 #include <iterator>
@@ -23,7 +24,7 @@ class Str {
   
   Str(const Str& s) { create(s.begin(), s.end()); }
   Str& operator =(const Str&);
-  ~Str() { uncreate(); }
+  ~Str() { uncreate(); }  
 
   Str(const char* cp) { create(cp, cp + strlen(cp)); }
   template <class In> Str(In i, In j) { create(i, j); }
@@ -49,6 +50,7 @@ class Str {
   template <class In> void insert(iterator, In, In);
 
  private:
+ 
   // chars is null-terminated, has length - 1 non-null chars
   size_type length;
   iterator chars;
