@@ -27,6 +27,7 @@ istream& operator>>(istream& is, Str& s) {
   // if still something to read, do so until next whitespace character
   if (is) {
     do s.data.push_back(c);      // compile error! data is private
+    // need to add friend istream& operator>>(istream& is, Str& s) in the header file
     while (is.get(c) && !isspace(c));
 
     // if we read whitespace, then put it back on the stream
