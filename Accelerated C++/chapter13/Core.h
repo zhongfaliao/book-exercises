@@ -8,78 +8,79 @@
 #include "grade.h"
 
 class Core {
-  friend class Student_info;
+	friend class Student_info;
 
- public:
- Core(): midterm(0), final(0) { }
-  Core(std::istream& is) { read(is); }
+public:
+	Core() : midterm(0), final(0) { }
+	Core(std::istream& is) { read(is); }
 
-  std::string name() const { return n; }
+	std::string name() const { return n; }
 
-  virtual std::istream& read(std::istream&);
-  virtual double grade() const { return ::grade(midterm, final, homework); }
-  virtual bool valid() const { return !homework.empty(); }
-  virtual bool fulfill_reqs() const {
-    return (std::find(homework.begin(), homework.end(), 0.0)
-	    == homework.end());
-  }
+	virtual std::istream& read(std::istream&);
+	virtual double grade() const { return ::grade(midterm, final, homework); }
+	virtual bool valid() const { return !homework.empty(); }
+	virtual bool fulfill_reqs() const {
+		return (std::find(homework.begin(), homework.end(), 0.0)
+			== homework.end());
+	}
 
-  virtual ~Core() { }
+	virtual ~Core() { }
 
- protected:
-  std::string n;
-  double midterm, final;
-  std::vector<double> homework;
+protected:
+	std::string n;
+	double midterm, final;
+	std::vector<double> homework;
 
-  std::istream& read_common(std::istream&);
+	std::istream& read_common(std::istream&);
 
-  virtual Core* clone() const { return new Core(*this); }
+	virtual Core* clone() const { return new Core(*this); }
+
+}; // end of class Core
+
+class Grad : public Core {
+public:
+	Grad() : thesis(0) { }
+	Grad(std::istream& is) { read(is); }
+
+	std::istream& read(std::istream&);
+	double grade() const { return std::min(Core::grade(), thesis); }
+	bool fulfill_reqs() const { return (thesis > 0.0); }
+
+private:
+	double thesis;
+
+	Grad* clone() const { return new Grad(*this); }
 };
 
-class Grad: public Core {
- public:
- Grad(): thesis(0) { }
-  Grad(std::istream& is) { read(is); }
+class PassFail : public Core {
+public:
+	PassFail() { }
+	PassFail(std::istream& is) { Core::read(is); }
 
-  std::istream& read(std::istream&);
-  double grade() const { return std::min(Core::grade(), thesis); }
-  bool fulfill_reqs() const { return (thesis > 0.0); }
+	double grade() const {
+		if (homework.size() > 0) return ::grade(midterm, final, homework);
+		else return (midterm + final) / 2;
+	}
 
- private:
-  double thesis;
+	bool valid() const { return true; }
+	bool fulfill_reqs() const { return true; }
 
-  Grad* clone() const { return new Grad(*this); }
+private:
+	PassFail * clone() const { return new PassFail(*this); }
 };
 
-class PassFail: public Core {
- public:
-  PassFail() { }
-  PassFail(std::istream& is) { Core::read(is); }
+class Audit : public Core {
+public:
+	Audit() { }
+	Audit(std::istream& is) { read(is); }
 
-  double grade() const {
-    if (homework.size() > 0) return ::grade(midterm, final, homework);
-    else return (midterm + final) / 2;
-  }
+	std::istream& read(std::istream&);
+	double grade() const { return 0.0; }
+	bool valid() const { return true; }
+	bool fulfill_reqs() const { return true; }
 
-  bool valid() const { return true; }  
-  bool fulfill_reqs() const { return true; }
-
- private:
-  PassFail* clone() const { return new PassFail(*this); }
-};
-
-class Audit: public Core {
- public:
-  Audit() { }
-  Audit(std::istream& is) { read(is); }
-
-  std::istream& read(std::istream&);
-  double grade() const { return 0.0; }
-  bool valid() const { return true; }  
-  bool fulfill_reqs() const { return true; }
-
- private:
-  Audit* clone() const { return new Audit(*this); }
+private:
+	Audit * clone() const { return new Audit(*this); }
 };
 
 bool compare(const Core&, const Core&);
