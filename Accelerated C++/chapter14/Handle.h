@@ -49,3 +49,4 @@ T* Handle<T>::operator->() const
 }
 
 #endif
+
