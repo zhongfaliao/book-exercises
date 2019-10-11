@@ -1,10 +1,6 @@
 #include <algorithm>
 
-#ifdef _MSC_VER
-#include "../minmax.h"
-#else
 using std::min;
-#endif
 
 #include "Core.h"
 #include "grade.h"
@@ -12,6 +8,7 @@ using std::min;
 using std::istream;
 using std::string;
 using std::vector;
+
 std::istream& read_hw(std::istream& in, std::vector<double>& hw);
 
 string Core::name() const { return n; }
