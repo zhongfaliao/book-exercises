@@ -29,7 +29,7 @@ public:
 	virtual Core* clone() const { return new Core(*this); }
 
 private:
-	// accessible only to `Core'
+	// accessible only to 'Core'
 	std::string n;
 	friend class Student_info;
 };
@@ -39,7 +39,7 @@ public:
 	Grad(): thesis(0) { }
 	Grad(std::istream& is) { read(is); }
 
-	// as defined in 13.1.2/230; Note: `grade' and `read' are `virtual' by inheritance
+	// as defined in 13.1.2/230; Note: 'grade' and 'read' are 'virtual' by inheritance
 	double grade() const;
 	std::istream& read(std::istream&);
 private:
