@@ -5,7 +5,7 @@ using std::istream;
 using std::vector;
 
 
-// read homework grades from an input stream into a `vector<double>'
+// read homework grades from an input stream into a 'vector<double>'
 istream& read_hw(istream& in, vector<double>& hw)
 {
 	if (in) {
